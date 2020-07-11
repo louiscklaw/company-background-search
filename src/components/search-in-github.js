@@ -19,7 +19,7 @@ function SearchInGithub(props){
           {
             return(
               <div>
-                <LinkToOutside href={`https://github.com/search?q=casetify&type=${type}`} text={`search in github for ${type}`} />
+                <LinkToOutside key={`github_search_${type}`} href={`https://github.com/search?q=casetify&type=${type}`} text={`search in github for ${type}`} />
               </div>
             )
           }

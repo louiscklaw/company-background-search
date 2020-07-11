@@ -25,6 +25,7 @@ import SearchInJobsdb from './search-in-jobsdb'
 import SearchInLihkg from './search-in-lihkg'
 import SearchInLinkedinJobs from './search-in-linkedin-jobs'
 import SearchInTaobao from './search-in-taobao'
+import SearchInScmp from './search-in-scmp'
 import SearchInYoutube from './search-in-youtube'
 import SearchInRakutenTw from './search-in-rakuten-tw'
 import SearchInRakutenJp from './search-in-rakuten-jp'
@@ -38,7 +39,7 @@ function SearchResult(props){
 
   return(
     <>
-      SearchResult
+      search keyword advisor
       <pre>
         {JSON.stringify(hello)}
       </pre>

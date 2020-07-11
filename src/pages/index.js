@@ -10,7 +10,7 @@ import SearchResult from '../components/search-result'
 
 const IndexPage = () => (
   <Layout>
-    company background searcher
+    Louis search advisor
     <Helmet>
       <meta charSet="utf-8" />
       <title>company background search</title>

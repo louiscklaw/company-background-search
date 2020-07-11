@@ -1,14 +1,24 @@
 import React from 'react'
 
-let default_value = {}
+import scss_style from '../scss/style.module.scss'
 
-let Theme = React.createContext(default_value)
+let default_value = {
+  hello:'', setHello: () => {},
+  active_style:{}, setActiveStyle: () => {}
+}
+
+let ThemeContext = React.createContext(default_value)
 
 function ThemeProvider(props){
+  let [hello, setHello] = React.useState('world')
+  let [active_style, setActiveStyle] = React.useState(scss_style)
   return(
-    <Theme.Provider>
+    <ThemeContext.Provider value={{
+      hello, setHello,
+      active_style, setActiveStyle
+    }}>
       {props.children}
-    </Theme.Provider>
+    </ThemeContext.Provider>
   )
 }
 
