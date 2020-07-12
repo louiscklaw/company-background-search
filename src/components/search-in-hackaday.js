@@ -3,7 +3,9 @@ import React from 'react'
 function SearchInHackaday(props){
   return(
     <div>
-      https://hackaday.io/search?term=casetify
+      <a href={`https://hackaday.io/search?term=casetify`} target="_blank">
+        search in Hackaday
+      </a>
     </div>
   )
 }
