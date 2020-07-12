@@ -9,6 +9,7 @@ import SearchInAppledaily from './search-in-appledaily'
 import SearchInBBC from './search-in-bbc'
 import SearchInCpjobs from './search-in-cpjobs'
 import SearchInCtgoodjobs from './search-in-ctgoodjobs'
+import SearchInCarousell from './search-in-carousell'
 import SearchInEzone from './search-in-ezone'
 import SearchInFacebook from './search-in-facebook'
 import SearchInGithub from './search-in-github'
@@ -24,12 +25,12 @@ import SearchInIndeed from './search-in-indeed'
 import SearchInJobsdb from './search-in-jobsdb'
 import SearchInLihkg from './search-in-lihkg'
 import SearchInLinkedinJobs from './search-in-linkedin-jobs'
-import SearchInTaobao from './search-in-taobao'
-import SearchInScmp from './search-in-scmp'
-import SearchInYoutube from './search-in-youtube'
-import SearchInRakutenTw from './search-in-rakuten-tw'
 import SearchInRakutenJp from './search-in-rakuten-jp'
+import SearchInRakutenTw from './search-in-rakuten-tw'
+import SearchInScmp from './search-in-scmp'
+import SearchInTaobao from './search-in-taobao'
 import SearchInWalmart from './search-in-walmart'
+import SearchInYoutube from './search-in-youtube'
 
 function SearchResult(props){
   let {
@@ -60,7 +61,7 @@ function SearchResult(props){
       <SearchInRakutenTw search_text={search_text}/>
       <SearchInRakutenJp search_text={search_text}/>
       <SearchInWalmart search_text={search_text}/>
-
+      <SearchInCarousell search_text={search_text} />
 
 
       <SearchInJobsdb search_text={search_text}/>
