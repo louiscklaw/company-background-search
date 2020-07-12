@@ -31,6 +31,7 @@ import SearchInScmp from './search-in-scmp'
 import SearchInTaobao from './search-in-taobao'
 import SearchInWalmart from './search-in-walmart'
 import SearchInYoutube from './search-in-youtube'
+import SearchInHkgolden from './search-in-hkgolden'
 
 function SearchResult(props){
   let {
@@ -78,6 +79,8 @@ function SearchResult(props){
       <SearchInGithub search_text={search_text} />
 
       <SearchInLihkg search_text={search_text} />
+      <SearchInHkgolden search_text={search_text} />
+
 
       <SearchInBBC search_text={search_text} />
       <SearchInHackaday search_text={search_text} />
