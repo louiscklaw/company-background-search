@@ -7,6 +7,7 @@ import SearchInAmazonJp from './search-in-amazon-jp'
 import SearchInAmazonUk from './search-in-amazon-uk'
 import SearchInAppledaily from './search-in-appledaily'
 import SearchInBBC from './search-in-bbc'
+import SearchInBloomberg from './search-in-bloomberg'
 import SearchInCpjobs from './search-in-cpjobs'
 import SearchInCtgoodjobs from './search-in-ctgoodjobs'
 import SearchInCarousell from './search-in-carousell'
@@ -51,6 +52,7 @@ function SearchResult(props){
       <SearchInYoutube search_text={search_text} />
       <SearchInHkejStartupbeat search_text={search_text} />
       <SearchInGlassdoor search_text={search_text}/>
+      <SearchInBloomberg search_text={search_text} />
 
       <SearchInGoogle search_text={search_text} />
       <SearchInGooglePlay search_text={search_text} />
