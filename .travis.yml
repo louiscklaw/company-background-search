@@ -17,19 +17,15 @@ jobs:
   include:
     - stage: Publish_dashboard
       name: Update travis build dashboard
+      if: branch = master
 
-      script:
-        - scripts/publish.sh
+      script: skip
 
       deploy:
         - provider: pages
           skip_cleanup: true
-          local_dir: gh-pages
+          local_dir: public
           github_token: $GITHUB_TOKEN
-          on:
-            branch: master
-
-      if: branch = master
 
 
 stages:
