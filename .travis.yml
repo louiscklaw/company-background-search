@@ -15,30 +15,17 @@ cache:
 
 jobs:
   include:
-    - stage: Merge
-      script:
-        - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
-        - bash merge_if_success.sh
-
-    - stage: Build
-      script:
-        - yarn build
-
     - stage: Publish_dashboard
       name: Update travis build dashboard
 
       script:
-        - yarn build
+        - scripts/publish.sh
 
       deploy:
         - provider: pages
           skip_cleanup: true
           local_dir: gh-pages
           github_token: $GITHUB_TOKEN
-          on:
-            branch: master
-
-      if: branch = master
 
 
 stages:
