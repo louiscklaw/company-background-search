@@ -13,15 +13,16 @@ cache:
   - npm
   - pip
 
-script:
-  - echo "helloworld"
-
 jobs:
   include:
     - stage: Merge
       script:
         - wget https://raw.githubusercontent.com/louiscklaw/travis-playlist/master/travis-build-merger/merge_if_success.sh
         - bash merge_if_success.sh
+
+    - stage: Build
+      script:
+        - yarn build
 
 stages:
   - Unit_test
