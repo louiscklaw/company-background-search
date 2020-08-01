@@ -24,17 +24,19 @@ jobs:
       script:
         - yarn build
 
+    - stage: Publish_dashboard
+      name: Update travis build dashboard
+      if: branch = master
 
+      script: skip
 
-deploy:
-  provider: pages
-  skip_cleanup: true
-  github_token: $GITHUB_TOKEN  # Set in the settings page of your repository, as a secure variable
-  keep_history: true
-  on:
-    branch: master
-
-
+      deploy:
+        - provider: pages
+          skip_cleanup: true
+          local_dir: public
+          github_token: $GITHUB_TOKEN
+          on:
+            branch: master
 
 stages:
   - Unit_test
